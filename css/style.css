@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ProductList {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-bottom: 60px
+}
+
+@media (min-width: 600px) {
+  .ProductList {
+    padding-bottom: calc(60px + 60 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .ProductList {
+    padding-bottom: 120px
+  }
+}
+
+.ProductList__item {
+  position: absolute;
+  box-sizing: border-box;
+  list-style-type: none;
+  padding-left: 2.08333%;
+  padding-right: 2.08333%;
+  width: 50%;
+  margin-top: 40px
+}
+
+@media (min-width: 600px) {
+  .ProductList__item {
+    margin-top: calc(40px + 40 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .ProductList__item {
+    margin-top: 80px
+  }
+}
+
+@media (min-width: 960px) {
+  .ProductList__item {
+    width: 33.333%
+  }
+}
+
+.ProductList__iconRed, .ProductList__iconBlack {
+  padding: 2px 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  font-size: 8px;
+  line-height: 8px
+}
+
+@media (min-width: 600px) {
+  .ProductList__iconRed, .ProductList__iconBlack {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 4px 10px
+  }
+}
+
+@media (min-width: 960px) {
+  .ProductList__iconRed, .ProductList__iconBlack {
+    font-size: 16px;
+    line-height: 16px
+  }
+}
+
+.ProductList__iconRed span, .ProductList__iconBlack span {
+  display: inline-block;
+  font-family: "M-font", sans-serif;
+  color: white;
+  letter-spacing: 0.05em;
+  vertical-align: baseline
+}
+
+.ProductList__iconRed {
+  background-color: #dc0050
+}
+
+.ProductList__iconBlack {
+  background-color: #000
+}
+
+.ProductList__iconCosmeAward {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  font-family: "TsukuMinPr6N-L", "YuMincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  color: #dc0050;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding: 10px 0;
+  line-height: 1.2;
+  border-top: 2px solid #dc0050;
+  border-bottom: 2px solid #dc0050;
+  box-sizing: border-box
+}
+
+@media (min-width: 600px) {
+  .ProductList__iconCosmeAward {
+    font-size: 13px;
+    border-top: 4px solid #dc0050;
+    border-bottom: 4px solid #dc0050
+  }
+}
+
+.ProductList__iconCosmeAward:before, .ProductList__iconCosmeAward:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #dc0050;
+  position: absolute;
+  left: 0
+}
+
+.ProductList__iconCosmeAward:before {
+  top: 2px
+}
+
+.ProductList__iconCosmeAward:after {
+  bottom: 2px
+}
+
+.ProductList__iconBesthit {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  color: #dc0050;
+  width: 30px;
+  height: 30px
+}
+
+.ProductList__iconBesthit svg {
+  height: 100%
+}
+
+@media (min-width: 600px) {
+  .ProductList__iconBesthit {
+    width: 47px;
+    height: 47px
+  }
+}
+
+@media (min-width: 960px) {
+  .ProductList-jagged .ProductList__item {
+    margin-top: 0
+  }
+}
+
+@media (min-width: 960px) {
+  .ProductList-jagged .ProductList__item:nth-child(2) {
+    margin-top: 11.11111%
+  }
+}
+
+@media (min-width: 960px) {
+  .ProductList-jagged .ProductList__item:nth-child(3n+4), .ProductList-jagged .ProductList__item:nth-child(3n+6) {
+    margin-top: -5.55556%
+  }
+}
+
+@media (min-width: 960px) {
+  .ProductList-jagged .ProductList__item:nth-child(3n+5) {
+    margin-top: 5.55556%
+  }
+}
+
+.ProductList__itemLink {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  position: relative
+}
+
+.ProductList__itemLink_PC:hover .ProductList__itemTextBlock {
+  transform: translate3d(0, 45px, 0);
+  transition-delay: 0s
+}
+
+.ProductList__itemImageBlock {
+  position: relative
+}
+
+.ProductList__itemBackground {
+  position: absolute;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: clip 0.5s cubic-bezier(0.55, 0.05, 0.22, 0.99)
+}
+
+.ProductList__itemImage {
+  position: relative
+}
+
+.ProductList__itemTextBlock {
+  margin-top: -7.61905%;
+  padding-left: 1.90476%;
+  padding-right: 1.90476%;
+  position: relative;
+  transition: transform 0.4s 0.01s cubic-bezier(0.36, 0.04, 0.23, 1);
+  pointer-events: none
+}
+
+.ProductList__itemLabel {
+  font-size: 9px;
+  line-height: 12px;
+  color: #dc0050;
+  display: block;
+  font-family: "YuGo", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase
+}
+
+@media (min-width: 600px) {
+  .ProductList__itemLabel {
+    font-size: calc(9px + 2 * ((100vw - 600px) / 1080));
+    line-height: calc(12px + 6 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .ProductList__itemLabel {
+    font-size: 11px;
+    line-height: 18px
+  }
+}
+
+.ProductList__itemName {
+  font-family:"TsukuMinPr6N-L{
+pm
+}
+
+","YuMincho","Yu Mincho","Hiragino Mincho ProN",serif;
+font-feature-settings:"palt";
+font-weight:normal;
+letter-spacing:0.1em;
+font-size:14px;
+line-height:19px;
+display:block;
+margin-top:0.25em
+}
+
+@media (min-width: 600px) {
+  .ProductList__itemName {
+    font-size: calc(16px + 4 * ((100vw - 600px) / 1080));
+    line-height: calc(19px + 5 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .ProductList__itemName {
+    font-size: 20px;
+    line-height: 24px
+  }
+}
+
+.ProductList__itemDescription {
+  font-size: 11px;
+  line-height: 18px;
+  font-family:"TsukuMinPr6N-L{
+pm
+}
+
+","YuMincho","Yu Mincho","Hiragino Mincho ProN",serif;
+font-feature-settings:"palt";
+letter-spacing:0.05em;
+letter-spacing:0.08em;
+color:#775f44;
+margin-bottom:0;
+margin-top:0.5em
+}
+
+@media (min-width: 600px) {
+  .ProductList__itemDescription {
+    font-size: calc(11px + 3 * ((100vw - 600px) / 1080));
+    line-height: calc(18px + 6 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .ProductList__itemDescription {
+    font-size: 14px;
+    line-height: 24px
+  }
+}
+
+.ProductList__itemDescription span.small {
+  display: none
+}
+
+.Subsection {
+  padding-top: 60px
+}
+
+@media (min-width: 600px) {
+  .Subsection {
+    padding-top: calc(60px + 60 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .Subsection {
+    padding-top: 120px
+  }
+}
+
+.Subsection-whiteTheme {
+  background-color: #fff
+}
+
+.Subsection-beigeTheme {
+  background-color: #f8f6f4
+}
+
+.Subsection__carouselBlock {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 60px
+}
+
+@media (min-width: 600px) {
+  .Subsection__carouselBlock {
+    padding-bottom: calc(60px + 60 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .Subsection__carouselBlock {
+    padding-bottom: 120px
+  }
+}
+
+@media (min-width: 600px) {
+  .Subsection__carouselBlock {
+    padding-left: 7.14286%;
+    padding-right: 7.14286%
+  }
+}
+
+.Subsection__heading {
+  font-family: "M-font", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 32px;
+  margin-top: 0;
+  margin-bottom: 20px
+}
+
+@media (min-width: 600px) {
+  .Subsection__heading {
+    font-size: calc(28px + 20 * ((100vw - 600px) / 1080));
+    line-height: calc(32px + 26 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .Subsection__heading {
+    font-size: 48px;
+    line-height: 58px
+  }
+}
+
+@media (min-width: 600px) {
+  .Subsection__heading {
+    margin-bottom: calc(20px + 20 * ((100vw - 600px) / 1080))
+  }
+}
+
+@media (min-width: 1680px) {
+  .Subsection__heading {
+    margin-bottom: 40px
+  }
+}
+
+.Subsection__heading-center {
+  text-align: center
+}
+
+.ContentWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  width: 90vw
+}
+
+@media (min-width: 960px) {
+  .ContentWrapper {
+    width: 85.71429vw
+  }
+}
+
+.PageContent .PageCotentIn {
+  width: 100%;
+  overflow: hidden;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+b {
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+div {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+html {
+  font-family: "YuGo", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
